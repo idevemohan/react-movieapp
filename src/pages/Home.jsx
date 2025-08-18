@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import MovieCard from "../components/MovieCard";
+import Moviecard from "../components/Moviecard";
 
 
 const Home = () => {
@@ -30,7 +30,7 @@ const Home = () => {
                 onChange={(e) => setSearch(e.target.value)} />
             <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-24'>
                 {movies.map((movie, index) => (
-                    <MovieCard key={index} movie={movie} />
+                    <Moviecard key={index} movie={movie} />
                 ))}
             </div>
             <div className="pagination-container flex justify-between mt-5 font-semibold">

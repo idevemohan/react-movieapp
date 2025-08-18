@@ -3,7 +3,7 @@ import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { WatchListContext } from "../context/WatchListContext";
 import Watchlist from "../pages/Watchlist";
 
-const MovieCard = ({ movie }) => {
+const Moviecard = ({ movie }) => {
     const {toggleWatchlist,watchlist} = useContext(WatchListContext)
 
     const inWatchList = watchlist.some((m)=>m.id == movie.id)
@@ -22,4 +22,4 @@ const MovieCard = ({ movie }) => {
     )
 }
 
-export default MovieCard
+export default Moviecard

@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import GenreFilter from "../components/GenreFilter";
 import { WatchListContext } from "../context/WatchListContext";
-import MovieCard from "../components/MovieCard";
+import Moviecard from "../components/Moviecard";
 
 
 const Watchlist = () => {
@@ -29,7 +29,7 @@ const Watchlist = () => {
             </div>
             <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-24'>
                 {filteredMovies.map((movie) => {
-                  return <MovieCard key={movie.id} movie={movie} />
+                  return <Moviecard key={movie.id} movie={movie} />
                 })}
             </div>
         </div>
