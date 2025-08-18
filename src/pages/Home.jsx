@@ -10,10 +10,10 @@ const Home = () => {
 
 
     useEffect(() => {
-        let url = "https://api.themoviedb.org/3/movie/popular?page=${page}&api_key=a4fa8d21831dea0ce9957e0fb219c176"
+        let url = `https://api.themoviedb.org/3/movie/popular?page=${page}&api_key=a4fa8d21831dea0ce9957e0fb219c176`
 
         if (search) {
-            url = "https://api.themoviedb.org/3/search/movie?query=${page}&api_key=a4fa8d21831dea0ce9957e0fb219c176"
+            url = `https://api.themoviedb.org/3/search/movie?query=${search}&api_key=a4fa8d21831dea0ce9957e0fb219c176`
 
         }
 
@@ -34,7 +34,7 @@ const Home = () => {
                 ))}
             </div>
             <div className="pagination-container flex justify-between mt-5 font-semibold">
-                <button disabled= {page==1} className="bg-gray-300 px-4 py-2 rounded"
+                <button disabled={page==1} className="bg-gray-300 px-4 py-2 rounded"
                 onClick={() =>{
                      setPage ((prev) => prev-1)
                 }}>

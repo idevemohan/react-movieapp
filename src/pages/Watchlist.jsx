@@ -1,16 +1,16 @@
 import React, { useContext, useState } from "react";
-import GenreFilter from "../components/Genrefilter";
+import GenreFilter from "../components/GenreFilter";
 import { WatchListContext } from "../context/WatchListContext";
 import MovieCard from "../components/MovieCard";
 
 
 const Watchlist = () => {
-    const {Watchlist,genreList} = useContext(WatchListContext)
+    const {watchlist,genreList} = useContext(WatchListContext)
 
     const [search,setSearch] = useState("")
     const [selectedGenre,setSelectedGenre] = useState("")
 
-    const filteredMovies = Watchlist.filter((movie) => 
+    const filteredMovies = watchlist.filter((movie) => 
     movie.title.toLowerCase().includes(search.toLowerCase())
 ).filter((movie) => {
     return !selectedGenre || movie.genre_ids.includes(Number(selectedGenre))

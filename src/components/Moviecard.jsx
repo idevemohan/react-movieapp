@@ -4,9 +4,9 @@ import { WatchListContext } from "../context/WatchListContext";
 import Watchlist from "../pages/Watchlist";
 
 const MovieCard = ({ movie }) => {
-    const {toggleWatchlist} = useContext(WatchListContext)
+    const {toggleWatchlist,watchlist} = useContext(WatchListContext)
 
-    const inWatchList = Watchlist.some( m => m.id == movie.id)
+    const inWatchList = watchlist.some((m)=>m.id == movie.id)
 
     return (
         <div className="bg-gray-400 p-4 relative rounded-lg text-white">
